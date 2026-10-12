@@ -9,7 +9,7 @@ AR = ar rcs
 LIBFT_DIR = libft
 LIBFT = $(LIBFT_DIR)/libft.a
 
-SOURCES = ft_print.c
+SOURCES = ft_print.c ft_putnbr_base.c
 
 OBJS = $(SOURCES:.c=.o)
 
@@ -27,7 +27,7 @@ $(LIBFT):
 # CREATOR OBJS RULE
 %.o : %.c
 	@echo "Compiling..."
-	$(cc) $(CFLAGS) -I. -I$(LIBFT_DIR) -c  $< -o $@
+	$(CC) $(CFLAGS) -I. -I$(LIBFT_DIR) -c  $< -o $@
 
 all:  $(NAME)
 
