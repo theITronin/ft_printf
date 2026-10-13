@@ -6,7 +6,7 @@
 /*   By: dbustama <dbustama@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 18:38:04 by dbustama          #+#    #+#             */
-/*   Updated: 2026/10/13 20:24:18 by dbustama         ###   ########.fr       */
+/*   Updated: 2026/10/13 21:11:09 by dbustama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_putlong_base(unsigned long nbr, char *base)
 	while (base[counter] != '\0')
 		counter++;
 	if (nbr >= counter)
-		len += ft_putnbr_base(nbr / counter, base);
+		len += ft_putlong_base(nbr / counter, base);
 	write(1, &base[nbr % counter], 1);
 	len++;
 	return (len);
@@ -32,9 +32,9 @@ int	ft_putlong_base(unsigned long nbr, char *base)
 int	print_long_hexadecimal(unsigned long n, char c)
 {
 	if (c == 'x')
-		return (ft_putnbr_base(n, "0123456789abcdef"));
+		return (ft_putlong_base(n, "0123456789abcdef"));
 	if (c == 'X')
-		return (ft_putnbr_base(n, "0123456789ABCDEF"));
+		return (ft_putlong_base(n, "0123456789ABCDEF"));
 	return (0);
 }
 
