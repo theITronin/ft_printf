@@ -6,7 +6,7 @@
 /*   By: dbustama <dbustama@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 17:38:58 by dbustama          #+#    #+#             */
-/*   Updated: 2026/10/13 20:24:37 by dbustama         ###   ########.fr       */
+/*   Updated: 2026/10/13 20:50:33 by dbustama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	print_string(char *str)
 	return (i);
 }
 	
-void	print_char(char c)
+int	print_char(char c)
 {
 	write(1, &c, 1);
 	return (1);

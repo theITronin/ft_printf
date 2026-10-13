@@ -6,7 +6,7 @@
 /*   By: dbustama <dbustama@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 13:14:37 by dbustama          #+#    #+#             */
-/*   Updated: 2026/10/13 20:24:53 by dbustama         ###   ########.fr       */
+/*   Updated: 2026/10/13 20:28:42 by dbustama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,7 @@ int	ft_printf(char const *format, ...)
 		}
 		else
 		{	
-			if (write(1, &format[i], 1) == -1);
-				return (-1);
+			write(1, &format[i], 1);
 			print_bytes++;
 			i++;
 		}
