@@ -6,7 +6,7 @@
 /*   By: dbustama <dbustama@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 17:29:13 by dbustama          #+#    #+#             */
-/*   Updated: 2026/10/13 20:23:13 by dbustama         ###   ########.fr       */
+/*   Updated: 2026/10/14 15:51:44 by dbustama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_putnbr_base(unsigned int nbr, char *base)
 {
-	unsigned int		counter;
-	int	len;
+	unsigned int	counter;
+	int				len;
 
 	len = 0;
 	counter = 0;

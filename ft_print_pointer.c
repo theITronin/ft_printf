@@ -6,12 +6,11 @@
 /*   By: dbustama <dbustama@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 18:38:04 by dbustama          #+#    #+#             */
-/*   Updated: 2026/10/13 21:11:09 by dbustama         ###   ########.fr       */
+/*   Updated: 2026/10/14 15:51:33 by dbustama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
 
 int	ft_putlong_base(unsigned long nbr, char *base)
 {
@@ -38,8 +37,7 @@ int	print_long_hexadecimal(unsigned long n, char c)
 	return (0);
 }
 
-
-int	print_pointer(unsigned long	n)
+int	print_pointer(unsigned long n)
 {
 	int	len;
 

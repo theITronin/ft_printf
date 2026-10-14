@@ -6,7 +6,7 @@
 /*   By: dbustama <dbustama@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 13:14:37 by dbustama          #+#    #+#             */
-/*   Updated: 2026/10/13 20:28:42 by dbustama         ###   ########.fr       */
+/*   Updated: 2026/10/14 15:50:53 by dbustama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,26 +15,25 @@
 int	ft_printf(char const *format, ...)
 {
 	va_list	args;
-	int	i;
-	int	print_bytes;
+	int		i;
+	int		print_bytes;
 
 	print_bytes = 0;
 	i = 0;
 	va_start(args, format);
 	while (format[i])
 	{
-		if (format[i] == '%')
+		if (format[i] == '%' && format[i + 1])
 		{
 			i++;
 			print_bytes += foud_type(format[i], args);
-			i++;
 		}
-		else
-		{	
+		else if (format[i] != '%')
+		{
 			write(1, &format[i], 1);
 			print_bytes++;
-			i++;
 		}
+		i++;
 	}
 	va_end(args);
 	return (print_bytes);
@@ -58,5 +57,3 @@ int	foud_type(char c, va_list args)
 		return (print_char('%'));
 	return (0);
 }
-
-
