@@ -9,7 +9,7 @@ AR = ar rcs
 LIBFT_DIR = libft
 LIBFT = $(LIBFT_DIR)/libft.a
 
-SOURCES = ft_print.c ft_print_numbers.c ft_print_string.c ft_print_hex.c ft_print_pointer.c
+SOURCES = ft_printf.c ft_print_numbers.c ft_print_string.c ft_print_hex.c ft_print_pointer.c
 
 OBJS = $(SOURCES:.c=.o)
 
